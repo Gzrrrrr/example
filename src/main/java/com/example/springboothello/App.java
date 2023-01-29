@@ -15,6 +15,7 @@ import java.util.List;
 
 @SpringBootApplication
 public class App {
+// 启动项目
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
