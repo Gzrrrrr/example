@@ -1,5 +1,15 @@
 server:
   port: 8091
+logging:
+  config: classpath:logback-admin.xml
+log:
+  level:
+    #日志级别从低到高分为：
+    #  配置TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+    root: INFO
+    my: DEBUG
+  file: logs/admin-server.log
+  maxsize: 10MB
 spring:
   datasource:
     driverClassName: org.h2.Driver
@@ -21,6 +31,9 @@ spring:
       platform: h2
       schema-locations: classpath:db/schema.sql
       data-locations: classpath:db/data.sql
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
 knife4j:
   enable: true
   setting:

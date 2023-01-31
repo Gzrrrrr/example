@@ -1,5 +1,6 @@
 package com.example.springBt.controller;
 
+import com.example.springBt.config.ResponseResult;
 import com.example.springBt.entity.User;
 import com.example.springBt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,9 @@ public class UserController {
      * @return user
      */
     @RequestMapping("add")
-    public User add(User user) {
+    public ResponseResult<Object> add(User user) {
         userService.addUser(user);
-        return user;
+        return ResponseResult.success(userService.list());
     }
 
     /**
@@ -34,7 +35,7 @@ public class UserController {
      * @return user list
      */
     @GetMapping("list")
-    public List<User> list() {
-        return userService.list();
+    public ResponseResult<List<User>> list() {
+        return ResponseResult.success(userService.list());
     }
 }

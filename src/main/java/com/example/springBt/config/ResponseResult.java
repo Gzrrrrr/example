@@ -1,14 +1,10 @@
-package tech.pdai.springboot.api.sign.config.response;
+package com.example.springBt.config;
+
+import lombok.Builder;
+import lombok.Data;
 
 import java.io.Serializable;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
 @Builder
 public class ResponseResult<T> {
@@ -84,6 +80,5 @@ public class ResponseResult<T> {
                 .timestamp(System.currentTimeMillis())
                 .build();
     }
-
 
 }

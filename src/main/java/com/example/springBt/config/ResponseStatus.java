@@ -1,11 +1,11 @@
-package tech.pdai.springboot.api.sign.config.response;
+package com.example.springBt.config;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 
 /**
  * @author pdai
