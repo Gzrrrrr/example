@@ -1,7 +1,7 @@
 package com.example.springBt.service.impl;
 
 import com.example.springBt.dao.UserRepository;
-import com.example.springBt.entity.User;
+import com.example.springBt.entity.param.UserParam;
 import com.example.springBt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,18 +18,18 @@ public class UserServiceImpl implements UserService {
     private UserRepository userDao;
 
     /**
-     * @param user user
+     * @param userParam user
      */
     @Override
-    public void addUser(User user) {
-        userDao.save(user);
+    public void addUser(UserParam userParam) {
+        userDao.save(userParam);
     }
 
     /**
      * @return user list
      */
     @Override
-    public List<User> list() {
+    public List<UserParam> list() {
         return userDao.findAll();
     }
 

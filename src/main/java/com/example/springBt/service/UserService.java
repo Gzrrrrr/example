@@ -1,17 +1,17 @@
 package com.example.springBt.service;
 
-import com.example.springBt.entity.User;
+import com.example.springBt.entity.param.UserParam;
 
 import java.util.List;
 
 public interface UserService {
     /**
-     * @param user user
+     * @param userParam user
      */
-    void addUser(User user);
+    void addUser(UserParam userParam);
 
     /**
      * @return user list
      */
-    List<User> list();
+    List<UserParam> list();
 }
